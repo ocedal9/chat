@@ -2,9 +2,9 @@ FROM node:alpine
 
 WORKDIR '/app'
 
-COPY package.json .
+COPY ./package.json ./
 RUN npm install
 COPY . .
 
 EXPOSE 4002
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
